@@ -6,13 +6,18 @@ Rake::TestTask.new do |t|
     t.verbose = true
   end
 
-desc " Crear Archivo tar.gz"
+desc "Crear Archivo tar.gz"
 task :dist do
 	sh "tar -cvf P_HTML.tar *"
 	sh "gzip P_HTML.tar"
 end
 
-desc " Crear Archivo .zip"
+desc "Crear Archivo .zip"
 task :zip do
 	sh "zip P_HTML.zip *"
+end
+
+desc "Borrar Ficheros Temporales"
+task :clean do
+	system 'find . -type f -name "*.tmp" -exec rm -f {} \;'
 end
