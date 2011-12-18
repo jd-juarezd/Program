@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HTML</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HTML</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/HTML_rb.html">
+                lib/HTML.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <ul>
+<li>Las etiquetas <a href="HTML.html">HTML</a> se implementan utilizando el <a
+href="HTML.html#M000002">method_missing</a>.
+
+<pre>
+   Un ejemplo de su uso seria el siguiente:
+
+    q= HTML.new {
+      html {
+       head(:dir =&gt; &quot;chazam&quot;, :lang =&gt; &quot;spanish&quot;) { title &quot;My wonderful home page&quot; }
+       body do
+         h1 &quot;Welcome to my home page!&quot;, :class =&gt; &quot;chuchu&quot;, :lang =&gt; &quot;spanish&quot;
+         b &quot;My hobbies:&quot;
+         ul do
+           li &quot;Juggling&quot;
+           li &quot;Knitting&quot;
+           li { i &quot;Sleeping&quot; }
+           li &quot;Metaprogramming&quot;
+         end #ul
+       end # body
+         }
+       }
+
+   Los argumentos son:
+
+   1. Una cadena
+   2. Opcionalmente un Hash
+
+   o tambien puede ser:
+
+   1. El Hash opcional
+   2. Un bloque especificado en el contexto que va entre corchetes
+</pre>
+</li>
+<li>El atributo <tt>p</tt> contiene una matriz con los parrafos de la pagina
+<tt>html</tt>
+
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000003">build_attr</a>&nbsp;&nbsp;
+      <a href="#M000002">method_missing</a>&nbsp;&nbsp;
+      <a href="#M000001">new</a>&nbsp;&nbsp;
+      <a href="#M000004">to_s</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">p</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000001" class="method-detail">
+        <a name="M000001"></a>
+
+        <div class="method-heading">
+          <a href="HTML.src/M000001.html" target="Code" class="method-signature"
+            onclick="popupCode('HTML.src/M000001.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(&amp;b)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000003" class="method-detail">
+        <a name="M000003"></a>
+
+        <div class="method-heading">
+          <a href="HTML.src/M000003.html" target="Code" class="method-signature"
+            onclick="popupCode('HTML.src/M000003.html');return false;">
+          <span class="method-name">build_attr</span><span class="method-args">(h)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
+
+        <div class="method-heading">
+          <a href="HTML.src/M000002.html" target="Code" class="method-signature"
+            onclick="popupCode('HTML.src/M000002.html');return false;">
+          <span class="method-name">method_missing</span><span class="method-args">(tag, *args) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000004" class="method-detail">
+        <a name="M000004"></a>
+
+        <div class="method-heading">
+          <a href="HTML.src/M000004.html" target="Code" class="method-signature"
+            onclick="popupCode('HTML.src/M000004.html');return false;">
+          <span class="method-name">to_s</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
