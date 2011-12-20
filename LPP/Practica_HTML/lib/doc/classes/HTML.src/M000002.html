@@ -20,7 +20,7 @@
                  <span class="ruby-identifier">text</span>  = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
                 <span class="ruby-keyword kw">end</span>
                 <span class="ruby-identifier">textattr</span> =<span class="ruby-identifier">build_attr</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>)
-                <span class="ruby-identifier">text</span> = <span class="ruby-node">&quot;&lt;#{tag}#{textattr}&gt;\n#{text}\n&lt;/#{tag}&gt;&quot;</span>
+                <span class="ruby-identifier">text</span> = <span class="ruby-node">&quot;&lt;#{tag}#{textattr}&gt;#{text}&lt;/#{tag}&gt;&quot;</span>
                 <span class="ruby-ivar">@p</span>[<span class="ruby-value">-1</span>].<span class="ruby-identifier">push</span> <span class="ruby-identifier">text</span>
                 <span class="ruby-identifier">text</span>
         <span class="ruby-keyword kw">end</span></pre>

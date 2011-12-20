@@ -13,7 +13,7 @@
   <pre><span class="ruby-comment cmt"># File lib/HTML.rb, line 61</span>
         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_attr</span>(<span class="ruby-identifier">h</span>)
         <span class="ruby-keyword kw">return</span> <span class="ruby-value str">''</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">h</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">h</span>.<span class="ruby-identifier">empty?</span>
-         <span class="ruby-identifier">h</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span> = <span class="ruby-node">&quot; #{key.to_s} = \&quot;#{h[key]}\&quot;&quot;</span> }
+         <span class="ruby-identifier">h</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-node">%{#{x[0]} = &quot;#{x[1]}&quot;}</span>}
         <span class="ruby-keyword kw">end</span></pre>
 </body>
 </html>

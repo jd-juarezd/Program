@@ -1,3 +1,21 @@
+=begin rdoc
+
+	* En este documento estan descritas algunas pruebas para verificar el buen funcionamiento del programa.
+
+	Las Pruebas son:
+
+	1. <tt>test_sin_valores</tt> , que ejecuta el programa con un hash vacio.
+
+	2. <tt>test_array_p</tt> , que ejecuta el programa con una prueba corta y verifica el tamaño y contenido de los diferentes arrays.
+
+	3. <tt>test_dimension_parrafo</tt> , que comprueba el tamaño del parrafo con uno ya definido.
+  
+	4. <tt>test_valor_corto</tt> , ejecuta una prueba corta del programa y compara su salida con una ya definida.
+
+	5. <tt>test_sin_argumentos</tt> , se comprueba que si se ejecuta el programa sin argumentos, nos aparece un error.
+  
+=end rdoc
+
 require 'HTML'
 require 'test/unit'
 

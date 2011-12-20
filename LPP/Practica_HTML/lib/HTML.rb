@@ -53,18 +53,18 @@ class HTML
 		 text  = args.shift
 		end
 		textattr =build_attr(args.shift)
-		text = "<#{tag}#{textattr}>\n#{text}\n</#{tag}>"
+		text = "<#{tag}#{textattr}>#{text}</#{tag}>"
 		@p[-1].push text
 		text
 	end
 
 	def build_attr(h)
 	return '' if h.nil? or h.empty?
-	 h.keys.map { |key| t = " #{key.to_s} = \"#{h[key]}\"" }
+	 h.inject("") { |s,x| s += %{#{x[0]} = "#{x[1]}"}}
 	end
 
 	def to_s 
-           @p.to_s
+           @p.join("\n")
 	end
 end
 
