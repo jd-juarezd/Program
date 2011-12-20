@@ -13,7 +13,7 @@ end
 
 desc "Crear Archivo .zip"
 task :zip do
-	sh "zip P_HTML.zip *"
+	sh "zip -r P_HTML.zip *"
 end
 
 desc "Borrar Ficheros Temporales"
